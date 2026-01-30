@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Structured Garden Tribute for Amina</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Pinyon+Script&family=Cinzel:wght@400;700&display=swap" rel="stylesheet"/>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "sage-green": "#8BA888",
+        "rose-pink": "#E1A1A1",
+        "creamy-white": "#FDFBF7",
+        "deep-forest": "#1A2E1A"
+      },
+      fontFamily: {
+        display: ["Montserrat", "sans-serif"],
+        serif: ["Playfair Display", "serif"],
+        script: ["Pinyon Script", "cursive"],
+        vibes: ["Great Vibes", "cursive"],
+        cinzel: ["Cinzel", "serif"]
+      }
+    }
+  }
+}
+</script>
+<style type="text/tailwindcss">
+        :root {
+            --silk-gradient: linear-gradient(135deg, #0A0A0A 0%, #1a1f14 40%, #2e1a2e 70%, #0A0A0A 100%);
+            --glass-black: rgba(0, 0, 0, 0.75);
+            --mauve-glow: 0 0 20px rgba(224, 187, 228, 0.4);
+            --gold-accent: #D4AF37;
+        }
+        body {
+            background-color: #0A0A0A;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        .silk-bg {
+            background: var(--silk-gradient);
+            background-size: 400% 400%;
+            animation: silkFlow 15s ease infinite;
+        }
+        @keyframes silkFlow {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+        .portrait-glow {
+            box-shadow: 0 0 60px 10px rgba(255, 192, 203, 0.3), 0 0 100px 20px rgba(224, 187, 228, 0.2);
+        }
+        .glass-card {
+            background: var(--glass-black);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(224, 187, 228, 0.2);
+        }
+        .icon-3d {
+            background: linear-gradient(145deg, #6b8243, #455626);
+            border: 1px solid var(--gold-accent);
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.5), inset 1px 1px 2px rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        .icon-3d:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 0 20px rgba(224, 187, 228, 0.6);
+        }
+        .floating-element {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(15px, -20px) rotate(10deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .magical-btn {
+            background: linear-gradient(90deg, #556B2F, #D4AF37, #556B2F);
+            background-size: 200% auto;
+            transition: 0.5s;
+        }
+        .magical-btn:hover {
+            background-position: right center;
+        }
+    </style>
+
+<style>
+:root {
+  --glass-bg: rgba(0, 0, 0, 0.70);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glow-pink: rgba(225, 161, 161, 0.5);
+}
+
+body {
+  min-height: 100vh;
+  background-color: #0d1a0d;
+}
+
+/* 🌿 Jardin réel */
+.garden-background {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.45)),
+    url('1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.garden-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+.glowing-btn {
+  box-shadow: 0 0 25px var(--glow-pink);
+}
+</style>
+</head>
+
+<body class="font-display garden-background text-white relative">
+
+<div class="garden-overlay"></div>
+
+<!-- 🎵 AUDIO LOCAL -->
+<audio id="musicAudio" src="123.mp3" preload="auto"></audio>
+
+<header class="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex justify-between bg-gradient-to-b from-black/80 to-transparent">
+  <div class="w-10 h-10 flex items-center justify-center rounded-full glass-card">
+    <span class="material-symbols-outlined">close</span>
+  </div>
+  <div class="text-center">
+    <p class="font-cinzel text-[10px] tracking-[0.4em] text-white/70">TRIBUTE TO</p>
+    <h2 class="font-cinzel text-sm tracking-[0.2em] uppercase">Amina Belkacemi</h2>
+  </div>
+  <div class="w-10 h-10 flex items-center justify-center rounded-full glass-card">
+    <span class="material-symbols-outlined text-rose-pink fill-1">favorite</span>
+  </div>
+</header>
+
+<main class="relative z-10 max-w-xl mx-auto px-6 pt-28 pb-32 space-y-12">
+
+<main class="relative z-10 max-w-xl mx-auto px-6 pt-24 pb-32 space-y-12">
+
+<div class="w-52 h-52 mx-auto rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
+  <div class="w-full h-full bg-cover bg-center"
+    style="background-image:url('22.JPG');">
+  </div>
+</div>
+
+<section class="glass-card rounded-3xl p-8 text-center">
+  <span class="material-symbols-outlined text-rose-pink text-4xl mb-4">local_florist</span>
+  <h1 class="font-cinzel text-2xl tracking-widest mb-4">A warm welcome, Amina! 🌸</h1>
+  <p class="font-serif italic text-lg text-white/90">
+    Hi Baby, It’s me, Zaki from the past, i hope your are doing well, i’ve made this one in a while, it has three ways of expressing my love for you, on my own way.
+Before that, press on the play button to play a song, so that it helps you enjoy reading, GOOD LUCK!
+  </p>
+</section>
+
+<!-- 🎶 BOUTON MUSIQUE -->
+<section class="glass-card rounded-3xl p-8 text-center">
+  <button onclick="toggleMusic()"
+    class="glowing-btn w-full bg-white text-deep-forest py-5 rounded-2xl flex justify-center gap-3 hover:scale-105 transition">
+    <span id="musicIcon" class="material-symbols-outlined fill-1">play_circle</span>
+    <span id="musicText" class="tracking-widest text-xs font-bold uppercase">Play music</span>
+  </button>
+  <p class="mt-4 text-xs italic text-white/50">
+    Apocalypse – Cigarettes After Sex
+  </p>
+</section>
+
+
+
+<section class="glass-card rounded-3xl p-8 text-center">
+  
+  <h1 class="font-cinzel text-2xl tracking-widest mb-4">VISUAL</h1>
+  <p class="font-serif italic text-lg text-white/90">
+   let’s talk about the first one, as you can see, it seems like a garden huh, at first, i wanted to make it in a different way, using your own favorite color theme, then an idea came up to my mind, i used to call you “my little garden” right? so this is you, the world i see in you baby.
+</section>
+
+<section class="glass-card rounded-3xl p-8 text-center">
+  
+  <h1 class="font-cinzel text-2xl tracking-widest mb-4">VERBAL</h1>
+  <p class="font-serif italic text-lg text-white/90">
+i’ve written something for you by the way, a poem, my second way to convey love, it is written with emotions, not words. Enjoy it baby! ““عَيْنَـا الغزالة"
+جَمِيلَتان … ليْسَـا لأُنثى إنسان
+مَنْحُوتَتَان … بيدِ خالقٍ فنّان
+بُنيَّتان … لِوَحْدِهِمَا كيان
+رُمُوشٌ تِلْكَ … أم شُعَبٍ من المَرجان؟
+—————————————————————-
+أَحْكِي غَزَلِي هذا … لأَعْيُنِ تِلك الغزَالـه”</section>
+
+
+<section class="glass-card rounded-[40px] p-10 text-center">
+   <h1 class="font-cinzel text-2xl tracking-widest mb-4">SPIRITUAL</h1>
+ 
+  <p class="font-serif italic text-xl mt-6">
+In order to keep our souls connected, i got a special thing for us, not just you this time 🙄, you see that little box at the bottom, both of us can write anything that’s gonna be saved there, so check on it from time to time, you might find a new love message from me (you can leave one for me too, i wouldn’t say NO 🫣)  </p>
+</section>
+
+
+<section class="glass-card rounded-3xl p-8 text-center">
+  
+  <h1 class="font-cinzel text-2xl tracking-widest mb-4">I KISS YOU HUNDREDS, MILLIONS OF TIMES BABY. </h1>
+  <p class="font-serif italic text-lg text-white/90">
+</section>
+<!-- 🎵 SCRIPT MUSIQUE -->
+<script>
+const audio = document.getElementById("musicAudio");
+const musicText = document.getElementById("musicText");
+const musicIcon = document.getElementById("musicIcon");
+
+function toggleMusic(){
+  if(audio.paused){
+    audio.play();
+    musicText.textContent = "Pause music";
+    musicIcon.textContent = "pause_circle";
+  }else{
+    audio.pause();
+    musicText.textContent = "Play music";
+    musicIcon.textContent = "play_circle";
+  }
+}
+</script>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Messages Anonymes – Amira</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messages Anonymes – Kaouther</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+  background:linear-gradient(135deg,#0A0A0A,#1f1a1f,#0A0A0A);
+  min-height:100vh;
+  color:white;
+}
+.glass{
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(15px);
+  border:1px solid rgba(224,187,228,0.3);
+}
+.magical{
+  background:linear-gradient(90deg,#556B2F,#D4AF37,#556B2F);
+  background-size:200%;
+  transition:.5s;
+}
+.magical:hover{
+  background-position:right;
+}
+</style>
+</head>
+
+<body class="flex items-center justify-center px-4">
+
+<section class="max-w-2xl w-full my-24">
+  <div class="glass p-10 rounded-3xl text-center">
+
+    <h1 class="text-3xl mb-4" style="color:#E0BBE4;">
+      💌  Anonymous Message
+    </h1>
+
+    <p class="text-white/70 italic mb-6">
+      Saved locally🌙
+    </p>
+
+    <!-- FORMULAIRE -->
+    <form onsubmit="saveMessage(event)" class="space-y-4">
+      <textarea
+        id="messageInput"
+        required
+        placeholder="Your message for Amira..."
+        class="w-full min-h-[150px] rounded-xl bg-black border border-white/20 p-4 text-white resize-none focus:outline-none focus:ring-2"
+      ></textarea>
+
+      <button type="submit" class="magical w-full py-3 rounded-xl font-bold uppercase">
+        Send a sweet thought  💌
+      </button>
+
+      <p id="sent" class="hidden mt-3 italic" style="color:#E0BBE4;">
+        Saved Messages  💖
+      </p>
+    </form>
+
+    <!-- AFFICHAGE DES MESSAGES -->
+    <div id="messagesBox" class="mt-8 text-left space-y-3"></div>
+
+  </div>
+</section>
+
+<script>
+const STORAGE_KEY = "kaouther_messages";
+
+/* 🔥 DÉMARRAGE AVEC 0 MESSAGE */
+localStorage.removeItem(STORAGE_KEY);
+
+function saveMessage(e){
+  e.preventDefault();
+
+  const input = document.getElementById("messageInput");
+  const msg = input.value.trim();
+  if(!msg) return;
+
+  const messages = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+  messages.push({
+    text: msg,
+    date: new Date().toLocaleString()
+  });
+
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
+  input.value = "";
+
+  document.getElementById("sent").classList.remove("hidden");
+  displayMessages();
+}
+
+function displayMessages(){
+  const box = document.getElementById("messagesBox");
+  const messages = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+
+  box.innerHTML = messages.length === 0
+    ? "<p class='italic text-white/60'>no message for Now 🌙</p>"
+    : messages.map(m => `
+        <div class="glass p-3 rounded-lg">
+          <p>${m.text}</p>
+          <p class="text-xs text-white/40 mt-1">${m.date}</p>
+        </div>
+      `).join("");
+}
+
+displayMessages();
+</script>
+
+</div>
+<div class="mt-12 flex flex-col items-center">
+<div class="w-12 h-[1px] bg-luxury-gold mb-4"></div>
+<span class="text-[10px] font-bold uppercase tracking-[0.8em] text-luxury-gold">Honor &amp; Beauty</span>
+</div>
+</div>
+<section class="glass-card rounded-3xl p-8 text-center">
+  
+  <h1 class="font-cinzel text-2xl tracking-widest mb-4">YOU OWE ME A PHYSICAL GIFT THE DAY WE MEET</h1>
+  <p class="font-serif italic text-lg text-white/90">
+</section>
+</div>
+</section>
+</div>
+<div class="fixed bottom-0 left-0 right-0 p-8 z-40 bg-gradient-to-t from-deep-black via-deep-black/80 to-transparent">
+<div class="max-w-md mx-auto flex flex-col gap-4">
+<button class="w-full flex items-center justify-center gap-3 bg-mauve-light text-deep-black py-5 rounded-2xl shadow-xl active:scale-95 transition-all font-bold tracking-widest text-sm uppercase">
+
+             
+<button class="w-full flex items-center justify-center gap-3 magical-btn text-white py-5 rounded-2xl active:scale-95 transition-all relative overflow-hidden group">
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-white">auto_awesome</span>
+<span class="font-bold tracking-widest text-sm uppercase">Awaken the Magic</span>
+</button>
+</div>
+</div>
+<!-- CREDIT DE DEVELOPPEMENT -->
+<div class="w-full text-center py-6 mt-20">
+  <p class="text-[10px] uppercase tracking-[0.35em] text-mauve-light/60 font-cinzel">
+    Developed by 
+    <span class="text-soft-pink font-bold">Zakaria Makrelouf</span>
+    <br>
+    for 
+    <span class="text-luxury-gold font-bold">Amina Belkacemi</span>
+  </p>
+</div>
+
+</body></html>
