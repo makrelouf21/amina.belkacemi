@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+²<!DOCTYPE html>
 <html class="light" lang="fr">
 <head>
 <meta charset="utf-8"/>
@@ -72,6 +72,10 @@ tailwind.config = {
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 0 20px rgba(224, 187, 228, 0.6);
         }
+        .text-3xl {
+    font-size: 2rem;
+    line-height: 2rem;
+}
         .floating-element {
             position: absolute;
             pointer-events: none;
@@ -93,9 +97,22 @@ tailwind.config = {
         .magical-btn:hover {
             background-position: right center;
         }
-    </style>
+  
 
-<style>
+
+ .text-l1g {
+    font-size: 1.125rem;
+    line-height: 1.75rem;}
+
+        /* MEDIA QUERIES POUR MOBILE */
+        @media only screen and (max-width: 450px) {
+           .text-l1g {
+    font-size: 0.80rem;
+    line-height: 1.25rem;}
+}
+
+
+
 :root {
   --glass-bg: rgba(0, 0, 0, 0.70);
   --glass-border: rgba(255, 255, 255, 0.18);
@@ -106,6 +123,11 @@ body {
   min-height: 100vh;
   background-color: #0d1a0d;
 }
+
+
+.text-xs {
+    font-size: 0.75rem;
+    line-height: 1.55rem;}
 
 /* 🌿 Jardin réel */
 .garden-background {
@@ -148,7 +170,7 @@ body {
     <span class="material-symbols-outlined">close</span>
   </div>
   <div class="text-center">
-    <p class="font-cinzel text-[10px] tracking-[0.4em] text-white/70">TRIBUTE TO</p>
+    <p class="font-cinzel text-[10px] tracking-[0.4em] text-white/70">SPECIAL GIFT FOR</p>
     <h2 class="font-cinzel text-sm tracking-[0.2em] uppercase">Amina Belkacemi</h2>
   </div>
   <div class="w-10 h-10 flex items-center justify-center rounded-full glass-card">
@@ -156,9 +178,8 @@ body {
   </div>
 </header>
 
-<main class="relative z-10 max-w-xl mx-auto px-6 pt-28 pb-32 space-y-12">
 
-<main class="relative z-10 max-w-xl mx-auto px-6 pt-24 pb-32 space-y-12">
+<main class="relative z-10 max-w-xl mx-auto px-6 pt-16 pb-32 space-y-12">
 
 <div class="w-52 h-52 mx-auto rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
   <div class="w-full h-full bg-cover bg-center"
@@ -169,9 +190,45 @@ body {
 <section class="glass-card rounded-3xl p-8 text-center">
   <span class="material-symbols-outlined text-rose-pink text-4xl mb-4">local_florist</span>
   <h1 class="font-cinzel text-2xl tracking-widest mb-4">A warm welcome, Amina! 🌸</h1>
+  <hr style="
+  width:60%;
+  margin:24px auto;
+  border:0;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+">
   <p class="font-serif italic text-lg text-white/90">
-    Hi Baby, It’s me, Zaki from the past, i hope your are doing well, i’ve made this one in a while, it has three ways of expressing my love for you, on my own way.
-Before that, press on the play button to play a song, so that it helps you enjoy reading, GOOD LUCK!
+    Hi baby,
+    <br>
+It’s me — Zaki, from the past.
+<br>
+I hope you’re doing well, I’ve been carrying this for a while now.
+<br>
+I shaped it slowly, carefully… because it holds three different ways I know how to love you — all in my own language.
+</p>
+<hr style="
+  width:60%;
+  margin:24px auto;
+  border:0;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+
+">
+<p class="font-serif italic text-lg text-white/90">
+Before you begin, press play on the song I chose for you.
+<br>
+Let it guide your emotions, and let the words find you the way they were meant to.
+<br>
   </p>
 </section>
 
@@ -192,36 +249,224 @@ Before that, press on the play button to play a song, so that it helps you enjoy
 <section class="glass-card rounded-3xl p-8 text-center">
   
   <h1 class="font-cinzel text-2xl tracking-widest mb-4">VISUAL</h1>
+  <hr style="
+  width:60%;
+  margin:24px auto;
+  border:0;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+">
   <p class="font-serif italic text-lg text-white/90">
-   let’s talk about the first one, as you can see, it seems like a garden huh, at first, i wanted to make it in a different way, using your own favorite color theme, then an idea came up to my mind, i used to call you “my little garden” right? so this is you, the world i see in you baby.
+   Let’s start with the first one.
+   <br>
+As you can see, it looks like a garden, doesn’t it?
+<br>
+At first, I planned to design it differently — using your favorite color palette.
+<br>
+But then a thought crossed my mind… 
+<br>
+I used to call you 
+<br>
+<b></b>“my little garden,”</b> remember? 
+<br>
+So I realized: this isn’t just a design, This is you.
+</p>
+<hr style="
+  width:60%;
+  margin:24px auto;
+  border:0;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+">
+<p class="font-serif italic text-lg text-white/90">
+Every detail here represents the world I see when I look at you, baby —
+a place where everything feels alive, calm, and endlessly beautiful.
+<br>
+This is how you exist in my eyes.
+<br>
+<br>
+My little garden.
+</p>
 </section>
 
 <section class="glass-card rounded-3xl p-8 text-center">
   
   <h1 class="font-cinzel text-2xl tracking-widest mb-4">VERBAL</h1>
+  <hr style="
+  width:60%;
+  margin:24px auto;
+  border:0;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+">
   <p class="font-serif italic text-lg text-white/90">
-i’ve written something for you by the way, a poem, my second way to convey love, it is written with emotions, not words. Enjoy it baby! ““عَيْنَـا الغزالة"
-جَمِيلَتان … ليْسَـا لأُنثى إنسان
-مَنْحُوتَتَان … بيدِ خالقٍ فنّان
-بُنيَّتان … لِوَحْدِهِمَا كيان
-رُمُوشٌ تِلْكَ … أم شُعَبٍ من المَرجان؟
-—————————————————————-
-أَحْكِي غَزَلِي هذا … لأَعْيُنِ تِلك الغزَالـه”</section>
+ I’ve written something for you, by the way, A poem.
+<br>
+This is my second way of loving you —
+through words that weren’t chosen for their beauty, but for their honesty.
+<br>
 
-
-<section class="glass-card rounded-[40px] p-10 text-center">
-   <h1 class="font-cinzel text-2xl tracking-widest mb-4">SPIRITUAL</h1>
- 
-  <p class="font-serif italic text-xl mt-6">
-In order to keep our souls connected, i got a special thing for us, not just you this time 🙄, you see that little box at the bottom, both of us can write anything that’s gonna be saved there, so check on it from time to time, you might find a new love message from me (you can leave one for me too, i wouldn’t say NO 🫣)  </p>
+It isn’t written with ink, it’s written with feeling.
+<br>
+Read it slowly.
+<br>
+Let it speak to you the way I would if I were there.
+<br>
+<br>
+Enjoy it, baby 🤍
 </section>
 
 
 <section class="glass-card rounded-3xl p-8 text-center">
-  
-  <h1 class="font-cinzel text-2xl tracking-widest mb-4">I KISS YOU HUNDREDS, MILLIONS OF TIMES BABY. </h1>
-  <p class="font-serif italic text-lg text-white/90">
+
+  <h1 class="font-cinzel text-3xl tracking-widest mb-4">
+    "عَيْنَـا الغزالة"
+  </h1>
+<hr style="
+  width:60%;
+  margin:24px auto;
+  border:0;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+">
+
+  <!-- Poème -->
+<p class="font-serif italic text-l1g text-white/90 leading-relaxed">
+  جَمِيلَتان … ليْسَتـا لأُنثى إنسان  
+  <br>
+  مَنْحُوتَتَان … بيدِ خالقٍ فنّان  
+  <br>
+  بُنيَّتان … لِوَحْدِهِمَا كيان  
+  <br>
+  رُمُوشٌ تِلْكَ … أم شُعَبٍ من المَرجان؟
+
+
+<!-- Ligne décorative centrée -->
+<hr style="
+  width:60%;
+  margin:24px auto;
+  border:0;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+">
+
+<!-- Dernière ligne -->
+<p class="font-serif italic text-l1g text-white/90 leading-relaxed">
+  أَحْكِي غَزَلِي هذا … لأَعْيُنِ تِلك الغزَالـه
+</p>
+
 </section>
+
+
+
+
+<section class="glass-card rounded-[40px] p-10 text-center">
+   <h1 class="font-cinzel text-2xl tracking-widest mb-4">SPIRITUAL</h1>
+   <hr style="
+  width:60%;
+  margin:24px auto;
+  border:0;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+">
+ 
+  <p class="font-serif italic text-xl mt-6">
+To keep our souls connected, I created something special for us —
+not just for you this time 🙄
+</p>
+<hr style="
+  width:60%;
+  margin:24px auto;
+  border:0;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+  ">
+<p class="font-serif italic text-xl mt-6">
+See that little box at the bottom?
+<br>
+It’s our space.
+<br>
+A quiet place where thoughts, feelings, and pieces of us can live.
+<br>
+
+Anything we write there will stay,
+waiting like a whisper between our souls.
+</p>
+<hr style="
+  width:60%;
+  margin:24px auto;
+  border:0;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+">
+<p class="font-serif italic text-xl mt-6">
+
+Check on it from time to time —
+you might find a new love message from me,
+left there when you least expect it.
+<br>
+And… you can leave one for me too.
+<br>
+I wouldn’t say no, haha
+</p>
+<hr style="
+  width:60%;
+  margin:24px auto;
+  border:0;
+  height:1px;
+  background:linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+  ">
+<p class="font-serif italic text-xl mt-6">
+After all, love doesn’t disappear.
+It just finds new places to stay.  </p>
+</section>
+
+
 <!-- 🎵 SCRIPT MUSIQUE -->
 <script>
 const audio = document.getElementById("musicAudio");
@@ -287,7 +532,7 @@ body{
   <div class="glass p-10 rounded-3xl text-center">
 
     <h1 class="text-3xl mb-4" style="color:#E0BBE4;">
-      💌  Anonymous Message
+      💌  Love Note
     </h1>
 
     <p class="text-white/70 italic mb-6">
@@ -299,12 +544,12 @@ body{
       <textarea
         id="messageInput"
         required
-        placeholder="Your message for Amira..."
+        placeholder="Write something..."
         class="w-full min-h-[150px] rounded-xl bg-black border border-white/20 p-4 text-white resize-none focus:outline-none focus:ring-2"
       ></textarea>
 
       <button type="submit" class="magical w-full py-3 rounded-xl font-bold uppercase">
-        Send a sweet thought  💌
+        Send Love  💌
       </button>
 
       <p id="sent" class="hidden mt-3 italic" style="color:#E0BBE4;">
@@ -322,7 +567,6 @@ body{
 const STORAGE_KEY = "kaouther_messages";
 
 /* 🔥 DÉMARRAGE AVEC 0 MESSAGE */
-localStorage.removeItem(STORAGE_KEY);
 
 function saveMessage(e){
   e.preventDefault();
@@ -364,14 +608,15 @@ displayMessages();
 </div>
 <div class="mt-12 flex flex-col items-center">
 <div class="w-12 h-[1px] bg-luxury-gold mb-4"></div>
-<span class="text-[10px] font-bold uppercase tracking-[0.8em] text-luxury-gold">Honor &amp; Beauty</span>
+<span class="text-[10px] font-bold uppercase tracking-[0.8em] text-luxury-gold">Ntiya zina dyali</span>
 </div>
 </div>
 <section class="glass-card rounded-3xl p-8 text-center">
   
-  <h1 class="font-cinzel text-2xl tracking-widest mb-4">YOU OWE ME A PHYSICAL GIFT THE DAY WE MEET</h1>
+  <h1 class="font-cinzel text-2xl tracking-widest mb-4">I KISS YOU HUNDREDS, EVEN MILLIONS OF TIMES, BABY INO. </h1>
   <p class="font-serif italic text-lg text-white/90">
 </section>
+
 </div>
 </section>
 </div>
@@ -380,11 +625,6 @@ displayMessages();
 <button class="w-full flex items-center justify-center gap-3 bg-mauve-light text-deep-black py-5 rounded-2xl shadow-xl active:scale-95 transition-all font-bold tracking-widest text-sm uppercase">
 
              
-<button class="w-full flex items-center justify-center gap-3 magical-btn text-white py-5 rounded-2xl active:scale-95 transition-all relative overflow-hidden group">
-<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<span class="material-symbols-outlined text-white">auto_awesome</span>
-<span class="font-bold tracking-widest text-sm uppercase">Awaken the Magic</span>
-</button>
 </div>
 </div>
 <!-- CREDIT DE DEVELOPPEMENT -->
@@ -393,7 +633,7 @@ displayMessages();
     Developed by 
     <span class="text-soft-pink font-bold">Zakaria Makrelouf</span>
     <br>
-    for 
+    just for 
     <span class="text-luxury-gold font-bold">Amina Belkacemi</span>
   </p>
 </div>
